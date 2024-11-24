@@ -1,0 +1,261 @@
+.home {
+  background-size: cover; /* Cover the entire area of the div */
+  background-position: center; /* Center the background image */
+  min-height: 100vh; /* Make sure it covers the full viewport height */
+  color: white; /* Ensuring text is visible on potentially dark backgrounds */
+  overflow: hidden;
+  /* background-color: #376830; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for navbar */
+  /* padding: 10px 10px; */
+  align-items: center;
+}
+
+.left-nav span {
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.left-nav{
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Align items vertically in the center */
+ 
+  margin-top: 5px;
+} 
+
+
+.navbar-logo {
+  height: 70px; /* Adjust size as needed */
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.right-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.right-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 15px;
+  transition: color 0.3s;
+}
+
+.right-nav a:hover, .right-nav a.active {
+  text-decoration: underline;
+  color: lightskyblue;  /* Bright yellow for active and hover state */
+}
+
+.right-nav button {
+  color: black;
+  background-color: lightblue;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+}
+
+.right-nav button:hover {
+  background-color: white;
+  color: #0056B3;
+}
+
+
+.search-section {
+  position: relative;
+  padding-top: 20px;
+  text-align: center; /* Centering all elements in search section */
+  /* margin-top: 100px; */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.logo2 {
+  width: 150px; /* Adjust to your preference */
+  height: 150px; /* Same as width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  display: block; /* For margin auto to work */
+  margin: 20px auto; /* Center horizontally */
+  border: 5px solid black;
+  animation: fadeIn 3s ease-in-out forwards; /* Play once and maintain the last frame */
+  margin-bottom: 70px;
+}
+
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0; /* Space around search bar */
+}
+
+
+.dropdown {
+  margin: 10px;
+  padding: 10px;
+  width: 165px;
+  background: white; /* Background to ensure readability */
+  color: black; /* Text color */
+}
+
+
+.button {
+  width: 150px;
+  margin-left: 45%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background-color: white;
+  color: black;
+  border: 2.5px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 5px;
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.button:hover {
+  background-color: lightblue /* Light blue color */
+}
+
+
+.search-icon {
+  width: 16px;  /* Width of the icon */
+  height: 16px; /* Height of the icon */
+}
+
+/* Styling for each result item */
+.results-section > div {
+  width: 60%;
+  margin-bottom: 15px;
+  margin-left: 18%;
+  padding: 20px;
+  background-color: #fafafa;
+  /* background-color: #aaca85; */
+  /* border: 1px solid #ddd; */
+  border: 3px solid #06ec06;
+  border-radius: 30px;
+  
+}
+
+/* Styling for headings in results */
+.results-section h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Styling for paragraph text in results */
+.results-section p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+/* Spinner (Loader) */
+.loading-spinner {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #001c32; /* Blue */
+  border-radius: 50%;
+  width: 40px;  /* Smaller width */
+  height: 40px; /* Smaller height */
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+ 
+}
+
+/* Animation for spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading Text */
+.loading-text {
+  text-align: center;
+  margin-top: 7px;
+  font-size: 20px; /* You can adjust this size */
+  color:#001c32 ;
+  margin-bottom: 10px;  /* Blue color to match spinner */
+  
+}
+
+/* Error Message Styling */
+/* Error Message Styling */
+/* Flexbox for centering */
+/* Error Message Styling */
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #ff4d4d;
+  background-color: #ffe6e6;
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+
+  /* Center horizontally and vertically with downward spacing */
+  margin: 0 auto; /* Center horizontally */
+  position: absolute; /* Positioning for vertical centering */
+  top: 85%; /* Adjust this value to move the message lower */
+  left: 50%; /* Horizontally align middle */
+  transform: translate(-50%, -50%); /* Adjust for element size to truly center */
+
+  z-index: 999;
+}
+
+
+/* No Results Message Styling */
+/* Flexbox for centering */
+/* No Results Message Styling */
+.no-results-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #ff4d4d;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+
+  /* Center horizontally and vertically */
+  position: absolute; /* Positioning for vertical centering */
+  top: 50%; /* Move the message 50% from the top */
+  left: 50%; /* Move the message 50% from the left */
+  transform: translate(-50%, -50%); /* Adjust the position to account for the element's size */
+
+  z-index: 999;
+}
+
+
+
